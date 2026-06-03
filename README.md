@@ -1,19 +1,18 @@
-<p align="center">
-  <img src="public/images/tjut-logo.png" alt="Logo" width="80" />
-  <h1 align="center">🎓 智慧教务管理系统</h1>
-  <p align="center">
-    <strong>一个以天津理工大学为示例的现代化教务系统前端模板</strong><br/>
-    可通过替换图片和修改文案快速适配任意高校
-  </p>
-  <p align="center">
-    <img src="https://img.shields.io/badge/Next.js-14.2-black?logo=next.js" alt="Next.js">
-    <img src="https://img.shields.io/badge/React-18-61DAFB?logo=react" alt="React">
-    <img src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript" alt="TypeScript">
-    <img src="https://img.shields.io/badge/CSS_Modules-000000?logo=cssmodules" alt="CSS Modules">
-    <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
-    <img src="https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?logo=tailwindcss" alt="Tailwind">
-  </p>
-</p>
+<div align="center">
+  <img src="./public/images/tjut-logo.png" alt="Logo" width="80">
+
+  # 🎓 智慧教务管理系统
+
+  **一个以天津理工大学为示例的现代化教务系统前端模板**<br/>
+  可通过替换图片和修改文案快速适配任意高校
+
+  <img src="https://img.shields.io/badge/Next.js-14.2-black?logo=next.js" alt="Next.js">
+  <img src="https://img.shields.io/badge/React-18-61DAFB?logo=react" alt="React">
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript" alt="TypeScript">
+  <img src="https://img.shields.io/badge/CSS_Modules-000000?logo=cssmodules" alt="CSS Modules">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?logo=tailwindcss" alt="Tailwind">
+</div>
 
 ---
 
