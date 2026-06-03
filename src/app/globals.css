@@ -1,0 +1,136 @@
+/* ============================================
+   DESIGN SYSTEM: 融合 Notion + Vercel + Linear
+   ============================================
+   主色调: 天理蓝 #0052A5 (校徽色)
+   深色: #0f172a (Linear 风格导航)
+   浅底: #faf9f7 (Notion 暖白)
+   边框: rgba(0,0,0,0.06) (Notion 微边框)
+   阴影: shadow-as-border (Vercel)
+   字体: Noto Sans SC (中文优先) + Geist (英文/数字)
+   */
+
+:root {
+  /* === Brand === */
+  --color-primary: #0052A5;
+  --color-primary-hover: #004080;
+  --color-primary-light: #e6f0fa;
+  --color-primary-subtle: #f0f6ff;
+
+  /* === Neutral (Notion Warm) === */
+  --color-bg: #faf9f7;
+  --color-surface: #ffffff;
+  --color-surface-warm: #f6f5f4;
+  --color-text-primary: rgba(0, 0, 0, 0.95);
+  --color-text-secondary: #615d59;
+  --color-text-tertiary: #a39e98;
+  --color-border: rgba(0, 0, 0, 0.06);
+  --color-border-strong: rgba(0, 0, 0, 0.1);
+
+  /* === Dark Nav (Linear) === */
+  --color-nav-bg: #0f172a;
+  --color-nav-surface: #1e293b;
+  --color-nav-text: #f1f5f9;
+  --color-nav-text-muted: #94a3b8;
+  --color-nav-border: rgba(255, 255, 255, 0.06);
+
+  /* === Status === */
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-error: #dc2626;
+
+  /* === Spacing === */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* === Radius === */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* === Shadow (Vercel style) === */
+  --shadow-border: 0 0 0 1px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-elevated: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-nav: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* === Reset === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-noto-sans-sc), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { border: none; cursor: pointer; font-family: inherit; }
+ul, ol { list-style: none; }
+
+/* === Layout === */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+@media (min-width: 768px) {
+  .container { padding: 0 var(--space-8); }
+}
+@media (min-width: 1024px) {
+  .container { padding: 0 var(--space-10); }
+}
+
+/* === Animations === */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Stagger */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.stagger.visible > *:nth-child(1) { transition-delay: 0ms; }
+.stagger.visible > *:nth-child(2) { transition-delay: 80ms; }
+.stagger.visible > *:nth-child(3) { transition-delay: 160ms; }
+.stagger.visible > *:nth-child(4) { transition-delay: 240ms; }
+.stagger.visible > *:nth-child(5) { transition-delay: 320ms; }
+.stagger.visible > *:nth-child(6) { transition-delay: 400ms; }
+.stagger.visible > *:nth-child(7) { transition-delay: 480ms; }
+.stagger.visible > *:nth-child(8) { transition-delay: 560ms; }
+.stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stagger > * { opacity: 1; transform: none; transition: none; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}

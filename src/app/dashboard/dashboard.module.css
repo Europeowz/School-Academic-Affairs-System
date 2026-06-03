@@ -1,0 +1,730 @@
+.dashboard {
+  min-height: 100vh;
+  background: #f0f2f5;
+}
+
+/* ====== Breadcrumb ====== */
+.breadcrumb {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 24px;
+  margin-top: 56px;
+}
+
+.breadcrumbInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.breadcrumbInner svg {
+  width: 14px;
+  height: 14px;
+  color: #2563eb;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.breadcrumbItem {
+  color: #374151;
+  font-weight: 500;
+}
+
+/* ====== Main Layout ====== */
+.mainContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 24px 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 1024px) {
+  .mainContent {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ====== Card Base ====== */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.cardTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.cardBody {
+  padding: 20px;
+}
+
+/* ====== 我的申请 Module ====== */
+.applicationCard {
+  display: flex;
+  min-height: 300px;
+}
+
+.appSidebar {
+  width: 160px;
+  background: #2563eb;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  flex-shrink: 0;
+  border-radius: 12px 0 0 12px;
+}
+
+.appSidebarTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.appFilterList {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 12px;
+}
+
+.appFilterActive {
+  color: #fff;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.appFilterActive:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.appCountWrap {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.appCount {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.appCountLabel {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 6px;
+}
+
+.appContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #9ca3af;
+  background: #fff;
+}
+
+.appEmptyIllustration {
+  width: 120px;
+  height: 100px;
+  margin-bottom: 16px;
+  opacity: 0.65;
+}
+
+.appEmptyIllustration svg {
+  width: 100%;
+  height: 100%;
+}
+
+.appEmptyText {
+  font-size: 14px;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+/* ====== 学业信息 Module ====== */
+.academicTabs {
+  display: flex;
+  gap: 0;
+  padding: 0 20px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.academicTab {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #6b7280;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.academicTab:hover {
+  color: #374151;
+}
+
+.academicTabActive {
+  color: #2563eb;
+  font-weight: 500;
+  border-bottom-color: #2563eb;
+}
+
+.semesterSelector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.semesterSelector:hover {
+  background: #f3f4f6;
+}
+
+.semesterSelector svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Grade List */
+.gradeList {
+  display: flex;
+  flex-direction: column;
+}
+
+.gradeItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #f9fafb;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.15s;
+}
+
+.gradeItem:hover {
+  background: #f9fafb;
+  margin: 0 -20px;
+  padding: 14px 20px;
+  border-radius: 8px;
+}
+
+.gradeItem:last-child {
+  border-bottom: none;
+}
+
+.gradeLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gradeIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.gradeInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.gradeName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.gradeMeta {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+.gradeRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gradeScore {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.gradeLevel {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.levelA {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.levelB {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.levelC {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+/* Grade Tooltip */
+.gradeTooltip {
+  position: absolute;
+  top: -8px;
+  right: 0;
+  transform: translateY(-100%);
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e5e7eb;
+  min-width: 260px;
+  z-index: 50;
+  display: none;
+}
+
+.gradeItem:hover .gradeTooltip {
+  display: block;
+}
+
+.tooltipTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.tooltipRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  font-size: 13px;
+}
+
+.tooltipLabel {
+  color: #6b7280;
+}
+
+.tooltipValue {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.tooltipTag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  background: #eff6ff;
+  color: #2563eb;
+  margin-right: 6px;
+}
+
+/* ====== 我的应用 Module ====== */
+.appGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 20px;
+}
+
+.appGridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.appGridItem:hover {
+  background: #f0f5ff;
+  transform: translateY(-2px);
+}
+
+.appGridIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.appGridIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.appGridLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* Version Tooltip */
+.versionTooltip {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  font-size: 12px;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.versionClose {
+  cursor: pointer;
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ====== 公告消息 Module ====== */
+.announcementHeader {
+  background: #2563eb;
+  padding: 0 20px;
+  display: flex;
+  align-items: stretch;
+}
+
+.announcementTab {
+  padding: 14px 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: none;
+  font-family: inherit;
+  transition: all 0.15s;
+  position: relative;
+}
+
+.announcementTab:hover {
+  color: #fff;
+}
+
+.announcementTabActive {
+  color: #fff;
+  font-weight: 500;
+}
+
+.announcementTabActive::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: #fff;
+  border-radius: 1px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.badgeRed {
+  background: #ef4444;
+  color: #fff;
+}
+
+.announcementList {
+  padding: 0;
+}
+
+.announcementItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f9fafb;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.announcementItem:hover {
+  background: #f9fafb;
+}
+
+.announcementItem:last-child {
+  border-bottom: none;
+}
+
+.annIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #fef3c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #d97706;
+}
+
+.annIcon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.annContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.annTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.annMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.annPin {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #dcfce7;
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.annTime {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.annFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.annMore, .annCollapse {
+  font-size: 13px;
+  color: #2563eb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+.annMore:hover, .annCollapse:hover {
+  color: #1d4ed8;
+}
+
+.annCollapse svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ====== 学习日程 Module ====== */
+.scheduleCard {
+  position: relative;
+}
+
+.scheduleHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.scheduleTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.scheduleBody {
+  padding: 20px;
+}
+
+.scheduleItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f9fafb;
+}
+
+.scheduleItem:last-child {
+  border-bottom: none;
+}
+
+.scheduleTime {
+  font-size: 13px;
+  color: #2563eb;
+  font-weight: 500;
+  white-space: nowrap;
+  min-width: 60px;
+}
+
+.scheduleDesc {
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.scheduleTag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  margin-left: 6px;
+}
+
+.tagBlue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.tagGreen {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.tagYellow {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+/* ====== Accessibility Button ====== */
+.accessibilityBtn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f472b6;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(244, 114, 182, 0.4);
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  z-index: 90;
+}
+
+.accessibilityBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(244, 114, 182, 0.5);
+}
+
+/* Full-width card spanning both columns */
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+/* Application card takes left column only on desktop */
+@media (min-width: 1024px) {
+  .applicationCard {
+    grid-column: 1;
+  }
+}
